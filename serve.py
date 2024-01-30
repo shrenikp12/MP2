@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/', methods=['POST'])
 def post():
     # Start the stress_cpu.py script in a non-blocking manner
-    subprocess.Popen(['python', 'stress_cpu.py'])
+    subprocess.Popen(['python3', 'stress_cpu.py'])
     return 'CPU stress script started', 202
 
 @app.route('/', methods=['GET'])
